@@ -2,13 +2,9 @@
 
 AI autonomous penetration testing system (Go backend + Next.js frontend)
 
-🌐 **Live Demo**: https://artex-demo.vercel.app/
-
 ---
 
 ## Screenshot Overview
-
-> Full interaction see the [online demo](https://artex-demo.vercel.app/).
 
 | Dashboard (overview / token usage / activity stream) | Task List |
 | :---: | :---: |
@@ -62,7 +58,7 @@ Supports direct synchronization of asset data from [ScopeSentry](https://github.
 ### Method 1: One‑Click Install Script (recommended)
 
 ```bash
-git clone https://github.com/Autumn-27/ARTEX.git
+git clone https://github.com/horizonl/ARTEX.git
 cd ARTEX
 ./install.sh
 ```
@@ -72,10 +68,10 @@ The script will:
   - **② Local Build**: Choose a database (existing or Docker‑started) → generate `config.json` → compile the Go binary → start.
 After installation, open **http://localhost:8787** (first visit go to `/setup` to set admin password).
 
-### Method 2: Docker Compose (manual)
+### Method 2: Docker Compose (recommended)
 
 ```bash
-git clone https://github.com/Autumn-27/ARTEX.git
+git clone https://github.com/horizonl/ARTEX.git
 cd ARTEX
 cp .env.example .env          # fill POSTGRES_PASSWORD, optional ANTHROPIC_API_KEY
 docker compose up -d          # pulls autumn27/artex image + postgres
@@ -89,7 +85,7 @@ You can select `http` (Streamable HTTP) or `sse` (legacy SSE) in system settings
 
 ### Method 3: Download Pre‑compiled Binaries (Releases)
 
-Download the appropriate zip from the [Releases](https://github.com/Autumn-27/ARTEX/releases) page, unzip to obtain `artex` + `start.sh` (Windows: `start.bat`) + `skills/` + `config.example.json`:
+Download the appropriate zip from the [Releases](https://github.com/horizonl/ARTEX/releases) page, unzip to obtain `artex` + `start.sh` (Windows: `start.bat`) + `skills/` + `config.example.json`:
 ```bash
 cp config.example.json config.json   # fill database connection
 ./start.sh                           # → http://localhost:8787
